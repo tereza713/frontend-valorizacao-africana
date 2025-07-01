@@ -9,7 +9,7 @@ export default function Home() {
   return(
     <>
       <Header>
-        <ul className="text-sm text-neutral-100 flex p-4 gap-2">
+        <ul className="flex flex-col items-center gap-2 text-lg text-neutral-100 sm:text-sm sm:p-4 sm:flex-row">
           <li>
             <a href="#sobre" className="transition hover:text-neutral-400 duration-300 ease-in-out">Sobre</a>
           </li>

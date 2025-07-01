@@ -5,7 +5,7 @@ children: React.ReactNode;
 
 export default function Header({children}:HeaderProps){
 return(
- <header className="bg-amber-950 h-23 flex justify-end items-center">
+ <header className="flex items-center justify-center h-46 bg-amber-950 sm:h-23 sm:justify-end">
     {children}
  </header>
 )
