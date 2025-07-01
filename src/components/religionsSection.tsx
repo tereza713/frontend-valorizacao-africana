@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Image from 'next/image'
 import SkeletonCards from "./skeletonCards";
+import { Raleway } from "next/font/google";
+const raleway = Raleway({ subsets: ['latin'], weight: ['400'] })
+
 
 interface ReligionsProps{ // tipando
     id: string;
@@ -41,8 +44,8 @@ export default function Religions(){
 }
 
     return (
-    <section className="flex flex-col items-center text-center p-6 bg-white rounded-lg max-w-3xl mx-auto my-10">
-        <h2 className="text-2xl font-bold text-orange-800 mb-4">Religiões</h2>
+    <section id="religioes" className="flex flex-col items-center text-center p-6 bg-white rounded-lg max-w-3xl mx-auto my-10 scroll-mt-20">
+        <h2 className={`${raleway.className} text-2xl font-bold text-orange-800 mb-4`}>Religiões</h2>
          <Image
             src="/img/religion.jpg"
             alt="Picture of the author"
@@ -53,7 +56,7 @@ export default function Religions(){
         <ul className="flex flex-wrap gap-6 justify-center p-4">
             {religions.map((religion)=>(
                 <li key={religion.id} className="bg-white p-6 w-64 rounded-xl shadow-md border border-neutral-200 text-neutral-800 hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-lg font-semibold text-indigo-700 mb-3">Nome: {religion.nome}</p>
+                    <p className={`${raleway.className}text-lg text-orange-700 mb-3`}>{religion.nome}</p>
                     <p className="space-y-2 text-sm text-neutral-600 mb-3">Origem: {religion.origem}</p>
                     <p className="space-y-2 text-sm text-neutral-600 mb-3">Descrição: {religion.descricao}</p>
                     <p className="space-y-2 text-sm text-neutral-600 mb-3">Preconceitos comuns: {religion.preconceitosComuns}</p>

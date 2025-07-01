@@ -1,6 +1,9 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import Skeleton from "./skeleton";
+import { Raleway } from "next/font/google";
+const raleway = Raleway({ subsets: ['latin'], weight: ['400'] })
+
 
 export default function Info(){
     const [info, setInfo] = useState<string>("");
@@ -32,8 +35,8 @@ export default function Info(){
         }
       
     return(
-        <section className="flex flex-col items-center text-center p-6 bg-white rounded-lg max-w-3xl mx-auto my-10">
-            <h2 className="text-2xl font-bold text-orange-800 mb-4">Valorização Africana</h2>
+        <section id="sobre" className="flex flex-col items-center text-center p-6 bg-white rounded-lg max-w-3xl mx-auto my-10 scroll-mt-20">
+            <h2 className={`${raleway.className} text-2xl font-bold text-orange-800 mb-4`}>Valorização Africana</h2>
             <p>{info}</p>
         </section>
     );
