@@ -41,6 +41,7 @@ npm install
 
 # Execute o servidor de desenvolvimento
 npm run dev
+```
 ---
 
 ### 📸 Imagens do Projeto
